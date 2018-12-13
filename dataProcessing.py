@@ -9,7 +9,6 @@ Created on Wed Dec 12 18:10:05 2018
 import numpy as np
 import textblob
 from textblob import TextBlob
-import matplotlib.pyplot as plt
 import csv
 import re
 
@@ -23,7 +22,14 @@ writer = csv.writer(filew)
 data=np.array([])
 for row in reader:
     data=np.append(data,row,axis=0)
-
+    
+#editing the data using regex
+for i in range(data.shape[0]):
+    data[i]=re.sub(r'^[^:]*:','',data[i])
+    data[i]=re.sub(r'http\S+','',data[i])
+    data[i]=re.sub(r'\\...','',data[i])
+    data[i]=re.sub(r'\W',' ',data[i])
+    
 #sentiment analysis on each tweet
 for i in range(data.shape[0]):
     blob = TextBlob(data[i])
