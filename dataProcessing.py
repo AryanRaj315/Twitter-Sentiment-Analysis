@@ -31,7 +31,7 @@ for i in range(data.shape[0]):
     data[i]=re.sub(r'\\n','',data[i])
     data[i]=re.sub(r'\\x..','',data[i])
     data[i]=re.sub(r'\W',' ',data[i])
-    writer.writerow(data[i])
+    writer.writerow([data[i]])
     
 #sentiment analysis on each tweet
 for i in range(data.shape[0]):
