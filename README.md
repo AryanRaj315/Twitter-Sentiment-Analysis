@@ -10,4 +10,4 @@ The language of tweets can also be modified with ISO 639-1 code.
 
 
 *dataProcessing
-The tweet data is collected in csv file which is then converted into a numpy array with every element of the array corresponding to a single tweet.Every tweet is then modified and scrapped using regex and a final modified tweet data csv file is created.Finally textblob is used for sentiment analysis of the tweets and a csv file is created with entries between -1 and +1 where -1 indicates negative and +1 positive
+The tweet data is collected in csv file which is then converted into a numpy array with every element of the array corresponding to a single tweet.Every tweet is then modified and scrapped using regex and a final modified tweet data csv file is created.Finally textblob is used for sentiment analysis of the tweets and a csv file is created with entries between -1 and +1 where -1 indicates negative and +1 positive opinion
