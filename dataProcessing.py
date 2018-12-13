@@ -11,14 +11,20 @@ import textblob
 from textblob import TextBlob
 import matplotlib.pyplot as plt
 import csv
+import re
 
-data=np.zeros(1)
-file = open('tweetsData.csv', 'r')
-reader=csv.reader(file)
+#file loading 
+filer = open('tweetsData.csv', 'r')
+reader=csv.reader(filer)
+filew = open('Sentiment.csv', 'a')
+writer = csv.writer(filew)
+
+#creating numpy array for the tweet data
+data=np.array([])
 for row in reader:
     data=np.append(data,row,axis=0)
-print(data)
 
+#sentiment analysis on each tweet
 for i in range(data.shape[0]):
     blob = TextBlob(data[i])
-    print(blob.sentiment)
+    writer.writerow([blob.sentiment.polarity])
