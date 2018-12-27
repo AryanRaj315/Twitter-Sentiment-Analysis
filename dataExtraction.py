@@ -28,7 +28,7 @@ def get_tweets(no_of_tweets):
     api=tweepy.API(auth)
     
     #Searching the tweets
-    MeTooTweets = tweepy.Cursor(api.search, q='traffic',geocode="19.134876,72.893954,50km", tweet_mode='extended', lang='en').items(no_of_tweets)
+    MeTooTweets = tweepy.Cursor(api.search, q='metoo',geocode="19.134876,72.893954,50km", tweet_mode='extended', lang='en').items(no_of_tweets)
     
     #Adding tweets to the datafile
     for tweet in MeTooTweets:
