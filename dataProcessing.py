@@ -6,16 +6,12 @@ Created on Wed Dec 12 18:10:05 2018
 """
 
 import numpy as np
-import textblob
-from textblob import TextBlob
 import csv
 import re
 
 #file loading 
 filer = open('tweetsData.csv', 'r')
 reader=csv.reader(filer)
-filew = open('Sentiment.csv', 'a')
-writerFinal = csv.writer(filew)
 filem = open('modifiedtweetsData.csv', 'a')
 writer = csv.writer(filem)
 
@@ -32,8 +28,3 @@ for i in range(data.shape[0]):
     data[i]=re.sub(r'\\x..','',data[i])
     data[i]=re.sub(r'\W',' ',data[i])
     writer.writerow([data[i]])
-    
-#sentiment analysis on each tweet
-for i in range(data.shape[0]):
-    blob = TextBlob(data[i])
-    writerFinal.writerow([blob.sentiment.polarity])
