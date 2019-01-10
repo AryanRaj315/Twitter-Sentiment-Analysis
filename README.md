@@ -16,3 +16,9 @@ Finally textblob is used for sentiment analysis of the tweets and a csv file is 
 
 *vaderAnalysis
 Vader uses NLTK lexicons and does analysis giving positive ,negative ,neutral and compound score.
+
+*tweetsdata.JPG-Raw tweets data samples collected from twitter
+
+*modifiedtweetsdata.JPG-Used REGEX for scrapping the data with only the key words
+
+*Sentiments.JPG-Has four coloumns pos,neut,neg and compound giving scores from -1 to +1 for each tweet
