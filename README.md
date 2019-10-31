@@ -1,3 +1,4 @@
+# Twitter Sentiment Analysis
 This is a part of the Sentiment analysis project under the Winter of Code of IIT(ISM) Dhanbad.
 
 The project aims at getting data from twitter API using tweepy library of python with #MeToo and then implementing sentiment analysis on the data collected
